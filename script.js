@@ -9,6 +9,7 @@ window.addEventListener('scroll', function () {
   });
 
   //TRACKER SECTION
+  document.getElementById("progressBar").classList.add("glow");
   const totalGoal = 34;
   let pintsDonated = 0;
 
@@ -31,7 +32,8 @@ window.addEventListener('scroll', function () {
 
     if (pintsDonated > totalGoal) {
       progressBar.style.backgroundColor = "#2ecc71"; // green
-      message.textContent = "🎉 Goal exceeded! Amazing job!";
+      message.textContent = "🎉 Goal Reached! You’ve helped save over 100 lives!";
+  message.classList.add("glow", "text-green-700");
     } else {
       progressBar.style.backgroundColor = "#e63946"; // red
       message.textContent = "";
