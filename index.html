@@ -18,50 +18,46 @@
 
   <main class="main-content">
         <div class="home-data">
-        <h1>Fostering Optimal Health</h1>
+        <h1><i class="fas fa-heartbeat mr-2 text-[#CD1C18]"></i>Fostering Optimal Health</h1>
         <p>Join the Students Brigade as we embark on a life-saving mission — one drop at a time.</p>
         </div>
 
     <!-- TRACKER SECTION -->
-<section class="tracker-section bg-white py-16 px-6 text-center">
-  <h2 class="text-3xl md:text-4xl font-bold text-[#e63946] mb-6">
-    <i class="fas fa-heartbeat mr-2 text-[#CD1C18]"></i>
+<section class="tracker-section py-16 px-6 text-center bg-white rounded-xl shadow-lg">
+  <h2 class="text-3xl md:text-4xl font-bold text-[#002C5F] mb-6 tracking-tight">
     Track Our Blood Drive to Save 100 Lives
   </h2>
 
-  <div class="max-w-xl mx-auto bg-[#fef2f2] rounded-xl shadow-lg p-8">
-    <div class="text-lg font-semibold text-gray-800 mb-4">
-      <i class="fas fa-bullseye text-[#1d3557] mr-1"></i> Goal:
-      <span class="text-[#e63946] font-bold">34 Pints</span>
+  <div class="tracker mx-auto bg-[#f9f9fb] rounded-xl p-8 shadow-md max-w-md">
+    <div class="goal mb-4 text-[#002855] text-lg">
+      <i class="fas fa-bullseye mr-1 text-[#CD1C18]"></i> Goal: <span class="font-bold">34 Pints</span>
     </div>
 
-    <div class="text-lg mb-2">
-      <i class="fas fa-tint text-[#1d3557] mr-1"></i> Pints Donated:
-      <span id="pints" class="font-bold text-[#1d3557]">0</span>
+    <div class="pints-donated mb-3 text-[#CD1C18] text-base font-semibold">
+      <i class="fas fa-tint mr-1"></i> Pints Donated: <span id="pints">0</span>
     </div>
 
-    <div class="w-full h-6 bg-gray-300 rounded-full overflow-hidden mb-4">
-      <div id="progressBar" class="h-full bg-[#e63946] transition-all duration-500 ease-in-out"></div>
+    <div class="progress-container w-full h-5 rounded-full bg-gray-300 overflow-hidden mb-4">
+      <div id="progressBar" class="progress-bar h-full transition-all"></div>
     </div>
 
-    <div class="text-lg mb-2">
-      <i class="fas fa-user-friends text-green-700 mr-1"></i> Estimated Lives Saved:
-      <span id="lives" class="font-bold text-green-700">0</span>
+    <div class="lives text-[#002855] text-base font-semibold mb-2">
+      <i class="fas fa-user-friends mr-1 text-green-600"></i> Estimated Lives Saved:
+      <span id="lives">0</span>
     </div>
-    <p class="text-sm text-gray-600 mb-4">
-      (Based on <i class="fas fa-tint text-[#1d3557]"></i> 1 Pint = 3 Lives)
-    </p>
 
-    <div id="message" class="text-sm font-semibold text-green-600 mb-4"></div>
+    <div class="note text-sm text-gray-600 mb-4">
+      (Based on <i class="fas fa-tint text-[#002855]"></i> 1 Pint = 3 Lives)
+    </div>
 
-    <button
-      onclick="donatePint()"
-      class="mt-4 px-6 py-3 bg-[#e63946] text-white font-semibold rounded-full hover:bg-[#d62828] transition duration-300 shadow-md"
-    >
-      <i class="fas fa-hand-holding-heart mr-2"></i>Donate Pint
+    <div id="message" class="exceeded text-green-700 text-sm font-semibold mb-4"></div>
+
+    <button onclick="donatePint()" class="donate-btn">
+      <i class="fas fa-hand-holding-heart mr-2"></i> Donate Pint
     </button>
   </div>
 </section>
+
 
 
 
@@ -83,77 +79,89 @@
   </section>
   
 
-  <section class="home-grid" id="home">
-      <div class="home-paragraphs">
-        <h1>About the Students Brigade</h1>
-        <p>
-      The Students Brigade is a student-led organization committed to meeting the
-      medical needs of our community in every way we can.
-      <br>
-      Our first mission: a Blood Drive to support patients in Georgia suffering from hematologic conditions — in honor of <span class="highlight">World Blood Donor Day on June 14th.</span>
-    </p>
-      </div>
-  
-      <img src="img/Health professional team-amico.png" alt="Home Image 1" class="home-image">
-    </section>
+  <section class="home-grid py-16 px-6" id="home">
+  <h1 class="text-4xl md:text-5xl font-bold text-[#002855] text-center md:text-left mb-8 max-w-4xl mx-auto">
+    About the Students Brigade
+  </h1>
 
-    <!-- Goals / Stats Section -->
-  <section class="py-12 px-4 bg-gray-50 text-center">
-    <h2 class="text-3xl font-bold mb-10">Our Goal</h2>
-    <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-6">
-      <div class="bg-white shadow-md p-6 rounded-lg">
-        <h3 class="text-2xl font-bold">🩸 100</h3>
-        <p class="text-gray-600">Lives to be saved</p>
-      </div>
-      <div class="bg-white shadow-md p-6 rounded-lg">
-        <h3 class="text-2xl font-bold">💉 34</h3>
-        <p class="text-gray-600">Pints Needed</p>
-      </div>
-      <div class="bg-white shadow-md p-6 rounded-lg">
-        <h3 class="text-2xl font-bold">🗓️ 5 Days</h3>
-        <p class="text-gray-600">Of Donation</p>
-      </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
+    <div class="home-paragraphs text-lg text-gray-700 leading-relaxed">
+      <p>
+        The <span class="font-semibold text-[#e63946]">Students Brigade</span> is a student-led organization committed to
+        meeting the medical needs of our community in every way we can.
+        <br><br>
+        Our first mission: a Blood Drive to support patients in Georgia suffering from hematologic conditions — 
+        in honor of <span class="highlight text-[#002855] font-medium">World Blood Donor Day on June 14th.</span>
+      </p>
     </div>
-  </section>
+
+    <div>
+      <img src="img/Health professional team-amico.png" alt="Medical Team" class="w-full max-w-md mx-auto md:mx-0">
+    </div>
+  </div>
+</section>
 
 
-  <!-- Unified Call to Action + Contact Section -->
-<section class="bg-red-100 py-16 px-4 text-center">
+    <section class="py-12 px-4 bg-[#fef2f2] text-center">
+  <h2 class="text-3xl md:text-4xl font-bold text-[#002c5f] mb-10">
+    <i class="fas fa-bullseye text-[#002c5f] mr-2"></i> Our Goal
+  </h2>
+
+  <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="bg-white shadow-md p-6 rounded-lg hover:shadow-lg transition">
+      <div class="text-4xl text-[#002c5f] mb-3">
+        <i class="fas fa-heartbeat"></i>
+      </div>
+      <h3 class="text-2xl font-bold text-[#002c5f]">100</h3>
+      <p class="text-[#002c5f]">Lives to be Saved</p>
+    </div>
+    <div class="bg-white shadow-md p-6 rounded-lg hover:shadow-lg transition">
+      <div class="text-4xl text-[#002c5f] mb-3">
+        <i class="fas fa-tint"></i>
+      </div>
+      <h3 class="text-2xl font-bold text-[#002c5f]">34</h3>
+      <p class="text-[#002c5f]">Pints Needed</p>
+    </div>
+    <div class="bg-white shadow-md p-6 rounded-lg hover:shadow-lg transition">
+      <div class="text-4xl text-[#002c5f] mb-3">
+        <i class="fas fa-calendar-alt"></i>
+      </div>
+      <h3 class="text-2xl font-bold text-[#002c5f]">5 Days</h3>
+      <p class="text-[#002c5f]">Of Donation</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <section class="bg-white py-16 px-4 text-center">
   <div class="max-w-3xl mx-auto">
-    <h2 class="text-3xl font-bold mb-4 text-[#e63946]">Sign up. Show up. Save a life.</h2>
-    <p class="text-lg mb-4 text-gray-800">
+    <h2 class="text-3xl font-bold mb-4 text-[#002c5f]">Sign up. Show up. Save a life.</h2>
+    <p class="text-lg mb-4 text-[#002c5f]">
       It’s more than just donating — it’s about coming together as a community, showing up for others, and making a real difference from day one. 💪🏾
     </p>
-    <p class="text-sm mb-6 text-gray-600">
+    <p class="text-sm mb-6 text-[#002c5f]">
       #BloodDrive2025 #BeTheDifference #LifeInEveryDrop #GiveHope
     </p>
-    <p class="text-lg text-gray-800 mb-6">
+    <p class="text-lg text-[#002c5f] mb-6">
       Have questions or want to get involved? Reach out to us on Instagram.
     </p>
     <a
-      href="https://instagram.com/thestudentsbrigade"
+      href="https://instagram.com/thestudentbrigade"
       target="_blank"
-      class="inline-flex items-center gap-2 px-6 py-3 bg-[#e63946] rounded-full shadow-lg hover:bg-[#d62828] transition duration-300"
-      style="color: #0b3158;"
+      class="inline-flex items-center gap-2 px-6 py-3 transition duration-300"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="currentColor"
-        class="w-5 h-5"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Zm4.25 3.25a5.75 5.75 0 1 1 0 11.5 5.75 5.75 0 0 1 0-11.5Zm0 1.5a4.25 4.25 0 1 0 0 8.5 4.25 4.25 0 0 0 0-8.5Zm5.2-.5a.8.8 0 1 1 0 1.6.8.8 0 0 1 0-1.6Z"
-        />
-      </svg>
+      <i class="fab fa-instagram text-lg"></i>
       Follow on Instagram
     </a>
   </div>
 </section>
 
+
 <section class="bg-[#f0f4f8] py-16 px-6 md:px-20 text-center">
-  <h2 class="text-3xl md:text-4xl font-bold text-[#0b3158] mb-4">Partner with Us</h2>
-  <p class="text-[#333] max-w-2xl mx-auto text-lg mb-10">
+  <h2 class="text-3xl md:text-4xl font-bold text-[#002c5f] mb-4">Partner with Us</h2>
+  <p class="text-[#002c5f] max-w-2xl mx-auto text-lg mb-10">
     Are you passionate about saving lives and supporting student-led initiatives?
     Sponsor the Students Brigade and make an impact today. Fill out the form below and we’ll get in touch!
   </p>
@@ -164,43 +172,44 @@
     class="max-w-xl mx-auto bg-white shadow-lg rounded-lg p-6 space-y-4"
   >
     <div>
-      <label class="block text-left text-sm font-semibold text-[#0b3158] mb-1">Your Name</label>
+      <label class="block text-left text-sm font-semibold text-[#002c5f] mb-1">Your Name</label>
       <input
         type="text"
         name="name"
         required
-        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0b3158]"
+        class="w-full px-4 py-2 border border-[#ccd6dd] rounded-md focus:outline-none focus:ring-2 focus:ring-[#002c5f]"
       />
     </div>
 
     <div>
-      <label class="block text-left text-sm font-semibold text-[#0b3158] mb-1">Email Address</label>
+      <label class="block text-left text-sm font-semibold text-[#002c5f] mb-1">Email Address</label>
       <input
         type="email"
         name="email"
         required
-        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0b3158]"
+        class="w-full px-4 py-2 border border-[#ccd6dd] rounded-md focus:outline-none focus:ring-2 focus:ring-[#002c5f]"
       />
     </div>
 
     <div>
-      <label class="block text-left text-sm font-semibold text-[#0b3158] mb-1">Message / Sponsorship Interest</label>
+      <label class="block text-left text-sm font-semibold text-[#002c5f] mb-1">Message / Sponsorship Interest</label>
       <textarea
         name="message"
         rows="4"
         required
-        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0b3158]"
+        class="w-full px-4 py-2 border border-[#ccd6dd] rounded-md focus:outline-none focus:ring-2 focus:ring-[#002c5f]"
       ></textarea>
     </div>
 
     <button
       type="submit"
-      class="w-full bg-[#0b3158] text-white font-semibold py-2 px-4 rounded-md hover:bg-[#062242] transition duration-300"
+      class="w-full bg-[#002c5f] text-white font-semibold py-2 px-4 rounded-md hover:bg-[#001e40] transition duration-300"
     >
       Send Message
     </button>
   </form>
 </section>
+
 
 
   </main>

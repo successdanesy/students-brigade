@@ -1,4 +1,63 @@
 /* style.css */
+/* 1. Header and Section Titles */
+h1, h2, h3, h4, h5, h6 {
+  color: #002c5f !important;
+}
+
+/* 2. Font Awesome Icon Styling (visible and matching) */
+i.fas, i.fab {
+  color: #002c5f !important;
+}
+
+/* 3. Instagram Button Fix */
+a.instagram-btn {
+  background-color: #e63946;
+  color: #002c5f !important;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+a.instagram-btn:hover {
+  background-color: #d62828;
+}
+
+/* Make sure icons in the button are also visible */
+a.instagram-btn i {
+  color: #fff !important;
+}
+
+/* 4. Form Submit Button Fix */
+form button[type="submit"] {
+  background-color: #002c5f;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #001d3d;
+}
+
+/* 5. Optional: Input & Textarea Focus Ring Matching */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #002c5f;
+  box-shadow: 0 0 0 3px rgba(0, 44, 95, 0.2);
+}
+
+
 
 body.page-bg {
   background-color: #e6f2ff;
@@ -30,6 +89,7 @@ body.page-bg {
 .header.scrolled {
   padding-top: 3%;
   background-color: white;
+  z-index: 1000;
 }
 
 .header.scrolled .logo {
@@ -38,8 +98,11 @@ body.page-bg {
 
 /* MAIN CONTENT */
 .main-content {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  line-height: 1.6; 
   padding: 2rem 1rem;
-  max-width: 1600px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -48,13 +111,6 @@ body.page-bg {
       font-weight: bold;
       color: #d00000;
     }
-
-.home-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 2rem;
-}
 
 
 /* Centered Full-Width Heading */
@@ -72,39 +128,26 @@ body.page-bg {
   margin-bottom: 1.5rem;
 }
 
-/* Paragraph Texts (Left Column) */
-.home-paragraphs {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.1rem;
-  color: #333;
-  line-height: 1.6;
+.home-grid {
+  padding: 4rem 1.5rem;
+  opacity: 1;
+  border-left-width: 1px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-radius: 15px;
 }
 
-.home-paragraphs h1 {
-  font-size: 1.5rem;
-  color: #002c5f;
-  margin-bottom: 1rem;
+.home-grid h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #002855;
+  font-weight: 700;
+  margin-bottom: 2rem;
 }
 
-.home-paragraphs p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
 
-/* Image (Right Column) */
-.home-image {
-  /* width: 100%;
-  max-width: 500px;
-  height: auto;
-  justify-self: center; */
-      max-width: 70%;
-      height: 80%;
-      display: block;
-      margin: 0 auto 2rem;
-      justify-self: center;
-      animation: fadeIn 1s ease-in-out;
-}
 
 /* Fade-in Animation */
 @keyframes fadeIn {
@@ -113,26 +156,116 @@ body.page-bg {
 }
 
 
-/* TRACKER SECTION*/
-/* Section Title */
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  margin: 4rem 0 2rem;
-  color: #002c5f;
+/* Tracker Section Styles */
+.tracker-section {
+  background: white;
+  opacity: 1;
+  border-left-width: 1px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-radius: 15px;
+  padding: 4rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
 }
 
-/* Tracker Container */
-/* Optional: Add animation on full goal reached */
+.tracker-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #002c5f;
+  margin-bottom: 1.5rem;
+}
+
+.tracker {
+  background: #f9f9fb;
+  opacity: 1;
+  border-left-width: 1px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-radius: 15px;
+
+  
+  padding: 2rem;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+.goal,
+.pints-donated,
+.lives {
+  font-size: 1rem;
+}
+
+.progress-container {
+  background-color: #ddd;
+  border-radius: 30px;
+  overflow: hidden;
+  height: 1.25rem;
+}
+
+.progress-bar {
+  background-color: #CD1C18;
+  width: 0%;
+  transition: width 0.4s ease-in-out;
+}
+
+/* Text Colors */
+.goal {
+  color: #002855;
+  font-weight: 600;
+}
+
+.pints-donated {
+  color: #CD1C18;
+  font-weight: 600;
+}
+
+.lives {
+  color: #002855;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.exceeded {
+  color: #28a745;
+  font-weight: 600;
+}
+
+/* Donate Button */
+.donate-btn {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  background-color: #002855;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.donate-btn:hover {
+  background-color: #003b75;
+}
+
+/* Goal Glow Animation */
 @keyframes pulseGlow {
   0% {
-    box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.7);
+    box-shadow: 0 0 0 0 rgba(205, 28, 24, 0.6);
   }
   70% {
-    box-shadow: 0 0 0 10px rgba(230, 57, 70, 0);
+    box-shadow: 0 0 0 10px rgba(205, 28, 24, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(230, 57, 70, 0);
+    box-shadow: 0 0 0 0 rgba(205, 28, 24, 0);
   }
 }
 
@@ -140,88 +273,6 @@ body.page-bg {
   animation: pulseGlow 2s infinite;
 }
 
-
-
-.tracker-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: white;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  padding: 3rem 1rem;
-  border-radius: 10px;
-}
-
-.tracker {
-  /* background: white; */
-  border-radius: 15px;
-  padding: 30px;
-  text-align: center;
-  width: 90%;
-  max-width: 350px;
-}
-
-.goal {
-  font-size: 18px;
-  font-weight: bold;
-  color: #002855;
-  margin-bottom: 10px;
-}
-
-.pints-donated {
-  font-size: 16px;
-  color: #d00000;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.progress-container {
-  background-color: #ddd;
-  border-radius: 20px;
-  overflow: hidden;
-  height: 25px;
-  margin: 15px 0;
-}
-
-.progress-bar {
-  height: 100%;
-  background-color: #e63946;
-  width: 0%;
-  transition: width 0.4s ease, background-color 0.4s ease;
-}
-
-.lives {
-  font-size: 16px;
-  color: #002855;
-  font-weight: bold;
-}
-
-.note {
-  font-size: 12px;
-  color: #444;
-  margin-top: 5px;
-}
-
-.exceeded {
-  color: green;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-button {
-  margin-top: 15px;
-  padding: 8px 16px;
-  font-size: 14px;
-  background-color: #002855;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #004080;
-}
 
 /* Info Cards Section */
 .info-cards-section {

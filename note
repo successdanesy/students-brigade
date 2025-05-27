@@ -1,0 +1,54 @@
+/* Paragraph Texts (Left Column) */
+.home-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem; */
+}
+.home-paragraphs {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.home-paragraphs h1 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  justify-content: center;
+  font-size: 1rem;
+  color: #002c5f;
+  /* margin-bottom: 1rem; */
+}
+
+.home-paragraphs p {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Image (Right Column) */
+.home-image {
+  /* width: 100%;
+  max-width: 500px;
+  height: auto;
+  justify-self: center; */
+      max-width: 70%;
+      height: 80%;
+      display: block;
+      margin: 0 auto 2rem;
+      justify-self: center;
+      animation: fadeIn 1s ease-in-out;
+}
