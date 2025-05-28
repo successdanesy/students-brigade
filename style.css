@@ -1,63 +1,4 @@
 /* style.css */
-/* 1. Header and Section Titles */
-h1, h2, h3, h4, h5, h6 {
-  color: #002c5f !important;
-}
-
-/* 2. Font Awesome Icon Styling (visible and matching) */
-i.fas, i.fab {
-  color: #002c5f !important;
-}
-
-/* 3. Instagram Button Fix */
-a.instagram-btn {
-  background-color: #e63946;
-  color: #002c5f !important;
-  font-weight: 600;
-  padding: 12px 20px;
-  border-radius: 9999px;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
-  text-decoration: none;
-}
-
-a.instagram-btn:hover {
-  background-color: #d62828;
-}
-
-/* Make sure icons in the button are also visible */
-a.instagram-btn i {
-  color: #fff !important;
-}
-
-/* 4. Form Submit Button Fix */
-form button[type="submit"] {
-  background-color: #002c5f;
-  color: #fff;
-  font-weight: 600;
-  padding: 10px 16px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-form button[type="submit"]:hover {
-  background-color: #001d3d;
-}
-
-/* 5. Optional: Input & Textarea Focus Ring Matching */
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: #002c5f;
-  box-shadow: 0 0 0 3px rgba(0, 44, 95, 0.2);
-}
-
-
 
 body.page-bg {
   background-color: #e6f2ff;
@@ -85,21 +26,10 @@ body.page-bg {
   transition: transform 0.3s ease;
 }
 
-/* Scrolled state */
-.header.scrolled {
-  padding-top: 3%;
-  background-color: white;
-  z-index: 1000;
-}
-
-.header.scrolled .logo {
-  transform: scale(0.9) translateY(-10px);
-}
 
 /* MAIN CONTENT */
 .main-content {
   font-family: 'Poppins', sans-serif;
-  color: #333;
   line-height: 1.6; 
   padding: 2rem 1rem;
   max-width: 1000px;
@@ -124,35 +54,7 @@ body.page-bg {
 .home-data p {
   text-align: center;
   font-size: 1.2rem;
-  color: #333;
   margin-bottom: 1.5rem;
-}
-
-.home-grid {
-  padding: 4rem 1.5rem;
-  opacity: 1;
-  border-left-width: 1px;
-  border-top-width: 1px;
-  border-right-width: 1px;
-  border-bottom-width: 1px;
-  border-style: solid;
-  border-radius: 15px;
-}
-
-.home-grid h1 {
-  font-size: 2.5rem;
-  text-align: center;
-  color: #002855;
-  font-weight: 700;
-  margin-bottom: 2rem;
-}
-
-
-
-/* Fade-in Animation */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 
@@ -195,142 +97,7 @@ body.page-bg {
   max-width: 400px;
 }
 
-.goal,
-.pints-donated,
-.lives {
-  font-size: 1rem;
-}
 
-.progress-container {
-  background-color: #ddd;
-  border-radius: 30px;
-  overflow: hidden;
-  height: 1.25rem;
-}
-
-.progress-bar {
-  background-color: #CD1C18;
-  width: 0%;
-  transition: width 0.4s ease-in-out;
-}
-
-/* Text Colors */
-.goal {
-  color: #002855;
-  font-weight: 600;
-}
-
-.pints-donated {
-  color: #CD1C18;
-  font-weight: 600;
-}
-
-.lives {
-  color: #002855;
-}
-
-.note {
-  font-size: 0.85rem;
-  color: #444;
-}
-
-.exceeded {
-  color: #28a745;
-  font-weight: 600;
-}
-
-/* Donate Button */
-.donate-btn {
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  font-size: 0.9rem;
-  background-color: #002855;
-  color: white;
-  border: none;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.donate-btn:hover {
-  background-color: #003b75;
-}
-
-/* Goal Glow Animation */
-@keyframes pulseGlow {
-  0% {
-    box-shadow: 0 0 0 0 rgba(205, 28, 24, 0.6);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(205, 28, 24, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(205, 28, 24, 0);
-  }
-}
-
-#message.glow {
-  animation: pulseGlow 2s infinite;
-}
-
-
-/* Info Cards Section */
-.info-cards-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  padding: 4rem 1rem;
-  /* background-color: #f8fbff; */
-}
-
-/* Each Card */
-.info-card {
-  background: #f8fbff;
-  opacity: 1;
-  border-left-width: 1px;
-  border-top-width: 1px;
-  border-right-width: 1px;
-  border-bottom-width: 1px;
-  border-style: solid;
-  border-radius: 15px;
-  border-color: #f2e9f0;
-  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
-  padding: 2rem;
-  max-width: 320px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.info-card:hover {
-  transform: translateY(-10px);
-}
-
-.info-svg {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  justify-self: center;
-  animation: fadeIn 1s ease-in-out;
-}
-
-/* Fade-in Animation */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.info-card h1 {
-  font-size: 1.5rem;
-  color: #002c5f;
-  margin-bottom: 0.75rem;
-}
-
-.info-card p {
-  color: #444;
-  font-size: 1rem;
-  line-height: 1.5;
-}
 
 /* Footer */
 .footer {
