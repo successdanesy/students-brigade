@@ -30,17 +30,22 @@
   <!-- Heading -->
   <h2 class="text-3xl font-bold text-[#002c5f] mb-6">Track our Blood Drive</h2>
 
-<!-- Central "RBD" Circle Button -->
-<div class="flex flex-col items-center justify-center mb-10">
-  <button
-    id="rbdButton"
-    class="w-32 h-32 border-4 rounded-full flex items-center justify-center text-2xl font-bold"
-    style="border-color:#e63946; color:#e63946; cursor:pointer; transition: background-color 0.3s ease;"
-    onmouseover="this.style.backgroundColor='#fef2f2'"
-    onmouseout="this.style.backgroundColor='transparent'"
-  >
-    RBD
-  </button>
+<!-- RBD Button as Image with Pulse -->
+<div class="flex flex-col items-center justify-center mb-8">
+  <div class="p-3 rounded-full shadow-lg border-4 border-[#e63946] bg-white hover:bg-[#fff0f0] transition duration-300 animate-pulse-slow">
+    <img
+      id="rbdButton"
+      src="img/icons8-blood-100.png"
+      alt="Donate Blood Drop"
+      class="w-20 h-20 cursor-pointer hover:scale-110 transition-transform duration-300"
+    />
+  </div>
+  <span class="mt-3 text-[#e63946] font-semibold text-sm tracking-wide">+ Add Donation</span>
+</div>
+
+
+
+
   <!-- Reset Button -->
 <button
   id="resetButton"
@@ -49,7 +54,7 @@
   onmouseover="this.style.backgroundColor='#edf6f9'"
   onmouseout="this.style.backgroundColor='transparent'"
 >
-  Reset Last Count
+  − Remove Donation
 </button>
 
 </div>
@@ -58,7 +63,7 @@
 <!-- Stats Section -->
 <div class="grid grid-cols-2 gap-8 max-w-md mx-auto" style="color:#002c5f;">
   <!-- Pints Donated -->
-  <div class="bg-[#fef2f2] rounded-lg p-4 shadow-md">
+  <div class="bg-[#fef2f2] p-4">
     <h3 class="text-lg font-medium mb-1">Pints Donated</h3>
     <p class="text-3xl font-extrabold flex items-center justify-center gap-2" style="color:#e63946;">
   <i class="fas fa-tint" style="color:#e63946;"></i>0
@@ -67,7 +72,7 @@
   </div>
 
   <!-- Lives Saved -->
-  <div class="bg-[#edf6f9] rounded-lg p-4 shadow-md">
+  <div class="bg-[#edf6f9] p-4 ">
     <h3 class="text-lg font-medium mb-1">Lives Saved</h3>
     <p class="text-3xl font-extrabold flex items-center justify-center gap-2" style="color:#e63946;">
       <i class="fas fa-heartbeat" style="color:#e63946;"></i>0

@@ -60,7 +60,7 @@ body.page-bg {
 
 /* Tracker Section Styles */
 .tracker-section {
-  background: white;
+  background: #f6f6f6f6;
   opacity: 1;
   border-left-width: 1px;
   border-top-width: 1px;
@@ -89,12 +89,25 @@ body.page-bg {
   border-bottom-width: 1px;
   border-style: solid;
   border-radius: 15px;
-
-  
   padding: 2rem;
   text-align: center;
   width: 90%;
   max-width: 400px;
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 2s infinite;
 }
 
 
