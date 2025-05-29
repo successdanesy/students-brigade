@@ -18,6 +18,7 @@
   "homepage": "https://github.com/successdanesy/students-brigade#readme",
   "description": "",
   "dependencies": {
+    "@supabase/supabase-js": "^2.49.8",
     "cors": "^2.8.5",
     "express": "^5.1.0"
   }

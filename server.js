@@ -1,36 +1,45 @@
-const express = require('express'); 
-const app = express();
-const fs = require('fs');
+const express = require('express');
 const cors = require('cors');
-const path = require('path');
+const { createClient } = require('@supabase/supabase-js');
+require('dotenv').config(); // For using .env file (optional but secure)
 
+const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Optional: Serve frontend files if needed
-// app.use(express.static(path.join(__dirname, 'public'))); 
+// Supabase credentials (replace with your own values or load from .env)
+const supabase = createClient(
+  'https://pmdqbgsydekoefrfbzhi.supabase.co', // Replace with your project URL
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBtZHFiZ3N5ZGVrb2VmcmZiemhpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg1MTI3NDMsImV4cCI6MjA2NDA4ODc0M30.6eXzdlWY2-kfC_SP7qtSVEyFvK7L9Hs4VzUQ-zBVKEE'                    // Replace with your anon key
+);
 
-const DATA_FILE = 'counts.json';
+// GET endpoint to fetch counts
+app.get('/api/counts', async (req, res) => {
+  const { data, error } = await supabase
+    .from('donations')
+    .select('pints, lives')
+    .limit(1)
+    .single();
 
-// Endpoint to get current counts
-app.get('/api/counts', (req, res) => {
-  fs.readFile(DATA_FILE, 'utf8', (err, data) => {
-    if (err) return res.status(500).send('Error reading data');
-    res.json(JSON.parse(data));
-  });
+  if (error) return res.status(500).json({ error: error.message });
+  res.json(data);
 });
 
-// Endpoint to update counts
-app.post('/api/counts', (req, res) => {
+// POST endpoint to update counts
+app.post('/api/counts', async (req, res) => {
   const { pints, lives } = req.body;
-  const newData = JSON.stringify({ pints, lives });
-  fs.writeFile(DATA_FILE, newData, (err) => {
-    if (err) return res.status(500).send('Error saving data');
-    res.send('Data saved');
-  });
+
+  // Update the first row
+  const { error } = await supabase
+    .from('donations')
+    .update({ pints, lives })
+    .eq('id', 1);
+
+  if (error) return res.status(500).json({ error: error.message });
+  res.send('Data updated successfully');
 });
 
-// ✅ Only one app.listen with dynamic PORT
+// Start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

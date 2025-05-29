@@ -7,6 +7,9 @@ const livesDisplay = document.querySelector(".fa-heartbeat").nextSibling;
 let pints = 0;
 let lives = 0;
 
+// 🔗 Use your Render backend URL
+const BASE_URL = "https://students-brigade.onrender.com";
+
 // ✅ Function to update the numbers on the page
 function updateDisplay() {
   pintsDisplay.textContent = pints;
@@ -15,7 +18,7 @@ function updateDisplay() {
 
 // ✅ Load initial counts from backend when page loads
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("http://localhost:3000/api/counts")
+  fetch(`${BASE_URL}/api/counts`)
     .then((res) => res.json())
     .then((data) => {
       pints = data.pints;
@@ -27,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // ✅ Function to save current counts to backend
 function saveCounts() {
-  fetch("http://localhost:3000/api/counts", {
+  fetch(`${BASE_URL}/api/counts`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -58,6 +61,7 @@ resetButton.addEventListener("click", () => {
     saveCounts();
   }
 });
+
 // ✅ Optional: Save counts periodically (e.g., every 5 seconds)
 setInterval(() => {
   saveCounts();
