@@ -7,8 +7,8 @@ const path = require('path');
 app.use(cors());
 app.use(express.json());
 
-// Serve frontend files
-app.use(express.static(path.join(__dirname, 'public'))); // Put your HTML/CSS/JS inside 'public' folder
+// Optional: Serve frontend files if needed
+// app.use(express.static(path.join(__dirname, 'public'))); 
 
 const DATA_FILE = 'counts.json';
 
@@ -30,6 +30,8 @@ app.post('/api/counts', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log('Server running on http://localhost:3000');
+// ✅ Only one app.listen with dynamic PORT
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
