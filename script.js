@@ -62,7 +62,3 @@ resetButton.addEventListener("click", () => {
   }
 });
 
-// ✅ Optional: Save counts periodically (e.g., every 5 seconds)
-setInterval(() => {
-  saveCounts();
-}, 5000);
