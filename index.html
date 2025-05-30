@@ -24,100 +24,81 @@
     <img src="img/logo.png" alt="Students Brigade Logo" class="logo">
   </header>
 
-  <main class="main-content">
-        <!-- TRACKER SECTION -->
-<section class="tracker-section py-16 px-6 text-center bg-white rounded-xl shadow-lg">
+<main class="flex-1 flex items-center justify-center px-4">
+  <!-- TRACKER WRAPPER SECTION -->
+<section class="tracker-section px-6 text-center bg-white rounded-xl shadow-lg">
+
   <!-- Heading -->
-  <h2 class="text-3xl font-bold text-[#002c5f] mb-6">Track our Blood Drive</h2>
+  <h2 class="text-3xl sm:text-3xl font-bold text-[#002c5f] mb-6">
+    Track Our Blood Drive
+  </h2>
 
-<!-- RBD Button as Image with Pulse -->
-<div class="flex flex-col items-center justify-center mb-8">
-  <div class="p-3 rounded-full shadow-lg border-4 border-[#e63946] bg-white hover:bg-[#fff0f0] transition duration-300 animate-pulse-slow">
-    <img
-      id="rbdButton"
-      src="img/icons8-blood-100.png"
-      alt="Donate Blood Drop"
-      class="w-20 h-20 cursor-pointer hover:scale-110 transition-transform duration-300"
-    />
+  <!-- DONATION CONTROLS + STATS CONTAINER -->
+  <div class="donation-controls mb-6 bg-[#f9f9fb] rounded-xl p-8 shadow-md max-w-md">
+    
+    <!-- RBD Button + Reset -->
+    <div class="flex flex-col items-center justify-center mb-4">
+      <img
+        id="rbdButton"
+        src="img/icons8-blood-100.png"
+        alt="Donate Blood Drop"
+        class="w-16 h-16 animate-pulse-slow cursor-pointer"
+      />
+      <span class="mt-1 text-[#e63946] font-medium text-xs">+ Add Donation</span>
+
+      <!-- Reset Button -->
+      <button
+        id="resetButton"
+        class="mt-2 px-3 py-1 border text-xs font-medium rounded-full text-[#1d3557] border-[#1d3557] hover:bg-[#edf6f9] transition"
+      >
+        − Remove Donation
+      </button>
+    </div>
+
+    <!-- STATS SECTION -->
+    <div class="grid grid-cols-2 gap-6 max-w-md mx-auto text-[#002c5f]">
+      <!-- Pints Donated -->
+      <div class="bg-[#fef2f2] p-4 rounded">
+        <h3 class="text-sm sm:text-base font-medium mb-1">Pints Donated</h3>
+        <p class="text-2xl sm:text-3xl font-extrabold flex items-center justify-center gap-2 text-[#e63946]">
+          <i class="fas fa-tint"></i> 0
+        </p>
+      </div>
+
+      <!-- Lives Saved -->
+      <div class="bg-[#edf6f9] p-4 rounded">
+        <h3 class="text-sm sm:text-base font-medium mb-1">Lives Saved</h3>
+        <p class="text-2xl sm:text-3xl font-extrabold flex items-center justify-center gap-2 text-[#e63946]">
+          <i class="fas fa-heartbeat"></i> 0
+        </p>
+      </div>
+    </div>
   </div>
-  <span class="mt-3 text-[#e63946] font-semibold text-sm tracking-wide">+ Add Donation</span>
-</div>
 
-
-
-
-  <!-- Reset Button -->
-<button
-  id="resetButton"
-  class="mt-4 px-6 py-2 border-2 rounded-full text-sm font-medium"
-  style="border-color:#1d3557; color:#1d3557; cursor:pointer; transition: background-color 0.3s ease;"
-  onmouseover="this.style.backgroundColor='#edf6f9'"
-  onmouseout="this.style.backgroundColor='transparent'"
->
-  − Remove Donation
-</button>
-
-</div>
-
-
-<!-- Stats Section -->
-<div class="grid grid-cols-2 gap-8 max-w-md mx-auto" style="color:#002c5f;">
-  <!-- Pints Donated -->
-  <div class="bg-[#fef2f2] p-4">
-    <h3 class="text-lg font-medium mb-1">Pints Donated</h3>
-    <p class="text-3xl font-extrabold flex items-center justify-center gap-2" style="color:#e63946;">
-  <i class="fas fa-tint" style="color:#e63946;"></i>0
-</p>
+  <!-- INFO SECTION -->
+  <div class="info-section mt-8">
+    <p class="text-sm sm:text-base font-semibold mb-1 text-[#002c5f]">
+      The Students Brigade – Fostering Optimal Health
+    </p>
+    <p class="text-xs sm:text-sm mb-1 text-[#555]">Tbilisi, Georgia</p>
+    <p class="text-xs sm:text-sm">
+      <a
+        href="https://instagram.com/thestudentbrigade"
+        target="_blank"
+        class="inline-flex items-center gap-2 bg-[#002c5f] text-white px-4 py-1.5 rounded text-xs sm:text-sm font-medium hover:bg-[#001f3f] transition"
+      >
+        <i class="fab fa-instagram"></i> @thestudentsbrigade
+      </a>
     </p>
   </div>
 
-  <!-- Lives Saved -->
-  <div class="bg-[#edf6f9] p-4 ">
-    <h3 class="text-lg font-medium mb-1">Lives Saved</h3>
-    <p class="text-3xl font-extrabold flex items-center justify-center gap-2" style="color:#e63946;">
-      <i class="fas fa-heartbeat" style="color:#e63946;"></i>0
-    </p>
-  </div>
-</div>
-
-
-<!-- Info Section Before Footer -->
-<section class="bg-[#f9fafb] py-6 px-4 text-center">
-  <p class="text-lg font-semibold mb-1" style="color:#002c5f;">
-    The Students Brigade – Fostering Optimal Health
-  </p>
-  <p class="text-sm mb-1" style="color:#555;">Tbilisi, Georgia</p>
-  <p class="text-sm" style="color:#002c5f;">
-  <a
-    href="https://instagram.com/thestudentbrigade"
-    target="_blank"
-    style="
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background-color: #002c5f;
-      color: white;
-      padding: 6px 12px;
-      border-radius: 4px;
-      font-weight: 500;
-      text-decoration: none;
-      font-size: 14px;
-      transition: background-color 0.3s ease;
-    "
-  >
-    <i class="fab fa-instagram"></i>
-    @thestudentsbrigade
-  </a>
-</p>
 </section>
+</main>
 
 
-</section>
-    <!-- END OF TRACKER SECTION -->
 
-  </main>
   <!--Beginning of Footer-->
-<footer class="footer">
+<footer class="footer mt-8">
   <div class="footer-content">
       <p>Developed by <strong>Success Chukwuemeka</strong>. <br> Let's connect:</p>
       <div class="social-icons">
