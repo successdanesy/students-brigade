@@ -16,6 +16,8 @@ function updateDisplay() {
   livesDisplay.textContent = lives;
 }
 
+ 
+
 // ✅ Load initial counts from backend when page loads
 document.addEventListener("DOMContentLoaded", () => {
   fetch(`${BASE_URL}/api/counts`)

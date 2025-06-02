@@ -26,89 +26,88 @@
 
 <main class="flex-1 flex items-center justify-center px-4">
   <!-- TRACKER WRAPPER SECTION -->
-<section class="tracker-section px-6 text-center bg-white rounded-xl shadow-lg">
+  <section class="tracker-section px-6 text-center bg-white rounded-xl shadow-lg">
 
-  <!-- Heading -->
-  <h2 class="text-3xl sm:text-3xl font-bold text-[#002c5f] mx-10 my-4">
-    Track Our Blood Drive
-  </h2>
+    <!-- Heading -->
+    <h2 class="text-2xl sm:text-2xl font-bold text-[#002c5f]">
+      Track Our Blood Drive
+    </h2>
 
-  <!-- DONATION CONTROLS + STATS CONTAINER -->
-  <div class="donation-controls mt-10">
-    
-    <!-- RBD Button + Reset -->
-    <div class="flex flex-col items-center justify-center mb-2">
-      <img
-        id="rbdButton"
-        src="img/icons8-blood-100.png"
-        alt="Donate Blood Drop"
-        class="w-22 h-22 animate-pulse-slow cursor-pointer"
-      />
+    <!-- DONATION CONTROLS + STATS CONTAINER -->
+    <div class="donation-controls my-auto mx-auto flex flex-col items-center justify-center">
+      
+      <!-- RBD Button + Reset -->
+      <div class="flex flex-col items-center justify-center mb-2">
+        <img
+          id="rbdButton"
+          src="img/icons8-blood-100.png"
+          alt="Donate Blood Drop"
+          class="w-22 h-22 animate-pulse-slow cursor-pointer"
+        />
 
-      <!-- Reset Button -->
-      <button
-        id="resetButton"
-        class="mt-2 px-3 py-1 border text-xs font-medium rounded-full text-[#1d3557] border-[#1d3557] hover:bg-[#edf6f9] transition"
-       style="border-color:#1d3557; color:#1d3557; cursor:pointer; transition: background-color 0.3s ease;"
+        <!-- Reset Button -->
+        <button
+          id="resetButton"
+          class="mt-2 px-3 py-1 border text-xs font-medium rounded-full text-[#1d3557] border-[#1d3557] hover:bg-[#edf6f9] transition"
+          style="border-color:#1d3557; color:#1d3557; cursor:pointer; transition: background-color 0.3s ease;"
         >
-        − Remove Donation
-      </button>
-    </div>
-
-    <!-- STATS SECTION -->
-    <div class="grid grid-cols-2 gap-4 max-w-xs sm:max-w-md mx-auto px-4" style="color:#002c5f;">
-      <!-- Pints Donated -->
-      <div class="bg-[#fef2f2] p-4 rounded">
-        <h3 class="text-xs sm:text-sm md:text-base font-medium mb-1 whitespace-nowrap">Pints Donated</h3>
-        <p class="text-2xl sm:text-3xl font-extrabold inline-flex items-center justify-center gap-1 mx-auto" style="color:#e63946;">
-          <i class="fas fa-tint"></i> 0
-        </p>
-
+          − Remove Donation
+        </button>
       </div>
 
-      <!-- Lives Saved -->
-      <div class="bg-[#edf6f9] p-4 rounded">
-        <h3 class="text-xs sm:text-sm md:text-base font-medium mb-1 whitespace-nowrap">Lives Saved</h3>
-        <p class="text-2xl sm:text-3xl font-extrabold inline-flex items-center justify-center gap-1 mx-auto" style="color:#e63946;">
-          <i class="fas fa-heartbeat"></i> 0
+      <!-- STATS SECTION -->
+      <div class="grid grid-cols-2 gap-4 max-w-xs sm:max-w-md mx-auto px-4" style="color:#002c5f;">
+        <!-- Pints Donated -->
+        <div class="bg-[#fef2f2] p-4 rounded">
+          <h3 class="text-xs sm:text-sm md:text-base font-medium mb-1 whitespace-nowrap">Pints Donated</h3>
+          <p class="text-2xl justify-center items-center content-center m-auto font-extrabold inline-flex items-center justify-center gap-1 mx-auto" style="color:#e63946;">
+            <i class="fas fa-tint"></i> 0
           </p>
+        </div>
 
+        <!-- Lives Saved -->
+        <div class="bg-[#edf6f9] p-4 rounded">
+          <h3 class="text-xs sm:text-sm md:text-base font-medium mb-1 whitespace-nowrap">Lives Saved</h3>
+          <p class="text-2xl justify-center items-center content-center m-auto font-extrabold inline-flex items-center justify-center gap-1 mx-auto" style="color:#e63946;">
+            <i class="fas fa-heartbeat"></i> 0
+          </p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- INFO SECTION -->
-  <div class="info-section mb-4">
-    <p class="text-sm sm:text-base font-semibold mb-1" style="color:#002c5f;">
-      The Students Brigade – Fostering Optimal Health
-    </p>
-    <p class="text-xs sm:text-sm mb-1" style="color:#555;">Tbilisi, Georgia</p>
-    <p class="text-xs sm:text-sm"style="color:#002c5f;">
-      <a
-    href="https://instagram.com/thestudentbrigade"
-    target="_blank"
-    style="
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background-color: #0b3158;
-      color: white;
-      padding: 6px 12px;
-      border-radius: 4px;
-      font-weight: 500;
-      text-decoration: none;
-      font-size: 14px;
-      transition: background-color 0.3s ease;
-    "
-  >
-    <i class="fab fa-instagram"></i>
-    @thestudentsbrigade
-  </a>
-    </p>
-  </div>
+    <!-- INFO SECTION -->
+    <div class="info-section mb-4">
+      <p class="text-sm sm:text-base font-semibold mb-1" style="color:#002c5f;">
+        The Students Brigade – Fostering Optimal Health
+      </p>
+      <p class="text-xs sm:text-sm mb-1" style="color:#555;">Tbilisi, Georgia</p>
+      <p class="text-xs sm:text-sm" style="color:#002c5f;">
+        <a
+          href="https://instagram.com/thestudentbrigade"
+          target="_blank"
+          style="
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background-color: #0b3158;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+          "
+        >
+          <i class="fab fa-instagram"></i>
+          @thestudentsbrigade
+        </a>
+      </p>
+    </div>
 
-</section>
+  </section>
 </main>
+
 
 
 

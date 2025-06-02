@@ -55,7 +55,7 @@ body {
   text-align: center;
   font-size: 2rem;
   color: #002c5f;
-  margin-bottom: 2rem;
+
 }
 
 .home-data p {
@@ -64,16 +64,7 @@ body {
   margin-bottom: 1.5rem;
 }
 
-.tracker-wrapper {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-.donation-controls {
-  margin-bottom: 1.5rem;
-}
-.info-section {
-  margin-top: 2rem;
-}
+
 
 
 /* Tracker Section Styles */
