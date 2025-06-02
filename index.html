@@ -34,7 +34,7 @@
   </h2>
 
   <!-- DONATION CONTROLS + STATS CONTAINER -->
-  <div class="donation-controls mb-6 bg-[#f9f9fb] rounded-xl p-8 shadow-md max-w-md">
+  <div class="donation-controls mb-6">
     
     <!-- RBD Button + Reset -->
     <div class="flex flex-col items-center justify-center mb-4">
@@ -50,17 +50,18 @@
       <button
         id="resetButton"
         class="mt-2 px-3 py-1 border text-xs font-medium rounded-full text-[#1d3557] border-[#1d3557] hover:bg-[#edf6f9] transition"
-      >
+       style="border-color:#1d3557; color:#1d3557; cursor:pointer; transition: background-color 0.3s ease;"
+        >
         − Remove Donation
       </button>
     </div>
 
     <!-- STATS SECTION -->
-    <div class="grid grid-cols-2 gap-6 max-w-md mx-auto text-[#002c5f]">
+    <div class="grid grid-cols-2 gap-6 max-w-md mx-auto" style="color:#002c5f;">
       <!-- Pints Donated -->
       <div class="bg-[#fef2f2] p-4 rounded">
         <h3 class="text-sm sm:text-base font-medium mb-1">Pints Donated</h3>
-        <p class="text-2xl sm:text-3xl font-extrabold flex items-center justify-center gap-2 text-[#e63946]">
+        <p class="text-2xl sm:text-3xl font-extrabold flex items-center justify-center gap-2" style="color:#e63946;">
           <i class="fas fa-tint"></i> 0
         </p>
       </div>
@@ -68,7 +69,7 @@
       <!-- Lives Saved -->
       <div class="bg-[#edf6f9] p-4 rounded">
         <h3 class="text-sm sm:text-base font-medium mb-1">Lives Saved</h3>
-        <p class="text-2xl sm:text-3xl font-extrabold flex items-center justify-center gap-2 text-[#e63946]">
+        <p class="text-2xl sm:text-3xl font-extrabold flex items-center justify-center gap-2" style="color:#e63946;">
           <i class="fas fa-heartbeat"></i> 0
         </p>
       </div>
@@ -77,18 +78,31 @@
 
   <!-- INFO SECTION -->
   <div class="info-section mt-8">
-    <p class="text-sm sm:text-base font-semibold mb-1 text-[#002c5f]">
+    <p class="text-sm sm:text-base font-semibold mb-1" style="color:#002c5f;">
       The Students Brigade – Fostering Optimal Health
     </p>
-    <p class="text-xs sm:text-sm mb-1 text-[#555]">Tbilisi, Georgia</p>
-    <p class="text-xs sm:text-sm">
+    <p class="text-xs sm:text-sm mb-1" style="color:#555;">Tbilisi, Georgia</p>
+    <p class="text-xs sm:text-sm"style="color:#002c5f;">
       <a
-        href="https://instagram.com/thestudentbrigade"
-        target="_blank"
-        class="inline-flex items-center gap-2 bg-[#002c5f] text-white px-4 py-1.5 rounded text-xs sm:text-sm font-medium hover:bg-[#001f3f] transition"
-      >
-        <i class="fab fa-instagram"></i> @thestudentsbrigade
-      </a>
+    href="https://instagram.com/thestudentbrigade"
+    target="_blank"
+    style="
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #157359;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    "
+  >
+    <i class="fab fa-instagram"></i>
+    @thestudentsbrigade
+  </a>
     </p>
   </div>
 

@@ -75,23 +75,10 @@ body {
   margin-top: 2rem;
 }
 
-.donation-controls {
- background: #f9f9fb;
-  opacity: 1;
-  border-left-width: 1px;
-  border-top-width: 1px;
-  border-right-width: 1px;
-  border-bottom-width: 1px;
-  border-style: solid;
-  border-radius: 15px;
-  padding: 2rem;
-  text-align: center;
-  max-width: 400px;
-}
 
 /* Tracker Section Styles */
 .tracker-section {
-  background: white;
+  background: #f9f9fb;
   opacity: 1;
   border-left-width: 1px;
   border-top-width: 1px;
@@ -107,9 +94,6 @@ body {
 @media (min-width: 900px) {
   .tracker-section {
     padding: 1.5rem 6rem;
-  }
-  .donation-controls {
-    padding: 2.5rem ;
   }
 }
 
