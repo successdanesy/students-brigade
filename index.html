@@ -29,22 +29,21 @@
 <section class="tracker-section px-6 text-center bg-white rounded-xl shadow-lg">
 
   <!-- Heading -->
-  <h2 class="text-3xl sm:text-3xl font-bold text-[#002c5f] mb-6">
+  <h2 class="text-3xl sm:text-3xl font-bold text-[#002c5f] mx-10 my-4">
     Track Our Blood Drive
   </h2>
 
   <!-- DONATION CONTROLS + STATS CONTAINER -->
-  <div class="donation-controls mb-6">
+  <div class="donation-controls mt-10">
     
     <!-- RBD Button + Reset -->
-    <div class="flex flex-col items-center justify-center mb-4">
+    <div class="flex flex-col items-center justify-center mb-2">
       <img
         id="rbdButton"
         src="img/icons8-blood-100.png"
         alt="Donate Blood Drop"
-        class="w-16 h-16 animate-pulse-slow cursor-pointer"
+        class="w-22 h-22 animate-pulse-slow cursor-pointer"
       />
-      <span class="mt-1 text-[#e63946] font-medium text-xs">+ Add Donation</span>
 
       <!-- Reset Button -->
       <button
@@ -57,27 +56,29 @@
     </div>
 
     <!-- STATS SECTION -->
-    <div class="grid grid-cols-2 gap-6 max-w-md mx-auto" style="color:#002c5f;">
+    <div class="grid grid-cols-2 gap-4 max-w-xs sm:max-w-md mx-auto px-4" style="color:#002c5f;">
       <!-- Pints Donated -->
       <div class="bg-[#fef2f2] p-4 rounded">
-        <h3 class="text-sm sm:text-base font-medium mb-1">Pints Donated</h3>
-        <p class="text-2xl sm:text-3xl font-extrabold flex items-center justify-center gap-2" style="color:#e63946;">
+        <h3 class="text-xs sm:text-sm md:text-base font-medium mb-1 whitespace-nowrap">Pints Donated</h3>
+        <p class="text-2xl sm:text-3xl font-extrabold inline-flex items-center justify-center gap-1 mx-auto" style="color:#e63946;">
           <i class="fas fa-tint"></i> 0
         </p>
+
       </div>
 
       <!-- Lives Saved -->
       <div class="bg-[#edf6f9] p-4 rounded">
-        <h3 class="text-sm sm:text-base font-medium mb-1">Lives Saved</h3>
-        <p class="text-2xl sm:text-3xl font-extrabold flex items-center justify-center gap-2" style="color:#e63946;">
+        <h3 class="text-xs sm:text-sm md:text-base font-medium mb-1 whitespace-nowrap">Lives Saved</h3>
+        <p class="text-2xl sm:text-3xl font-extrabold inline-flex items-center justify-center gap-1 mx-auto" style="color:#e63946;">
           <i class="fas fa-heartbeat"></i> 0
-        </p>
+          </p>
+
       </div>
     </div>
   </div>
 
   <!-- INFO SECTION -->
-  <div class="info-section mt-8">
+  <div class="info-section mb-4">
     <p class="text-sm sm:text-base font-semibold mb-1" style="color:#002c5f;">
       The Students Brigade – Fostering Optimal Health
     </p>
