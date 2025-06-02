@@ -106,14 +106,14 @@ body {
 
 
 .animate-pulse-slow {
-  animation: pulse 2s infinite;
+  animation: pulse 1s infinite;
 }
 @keyframes pulse {
   0%, 100% {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.05);
+    transform: scale(1.10);
   }
 }
 
