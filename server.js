@@ -13,22 +13,21 @@ const supabase = createClient(
   process.env.SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBtZHFiZ3N5ZGVrb2VmcmZiemhpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg1MTI3NDMsImV4cCI6MjA2NDA4ODc0M30.6eXzdlWY2-kfC_SP7qtSVEyFvK7L9Hs4VzUQ-zBVKEE'
 );
 
-// GET: Fetch current counts
+// GET counts
 app.get('/api/counts', async (req, res) => {
   const { data, error } = await supabase
     .from('donations')
     .select('pints, lives')
-    .eq('id', 1)
+    .limit(1)
     .single();
 
   if (error) return res.status(500).json({ error: error.message });
   res.json(data);
 });
 
-// POST: Update counts
+// POST update counts
 app.post('/api/counts', async (req, res) => {
   const { pints, lives } = req.body;
-
   const { error } = await supabase
     .from('donations')
     .update({ pints, lives })
@@ -38,7 +37,6 @@ app.post('/api/counts', async (req, res) => {
   res.send('Data updated successfully');
 });
 
-// Start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
