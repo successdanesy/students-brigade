@@ -8,7 +8,7 @@ let pints = 0;
 let lives = 0;
 
 // 🔗 Use your Render backend URL
-const BASE_URL = "https://students-brigade.onrender.com";
+const BASE_URL = "https://students-bridage-backend.onrender.com";
 
 // ✅ Function to update the numbers on the page
 function updateDisplay() {
